@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Code Log In</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayAlok = function (str) {
+        console.log(str, Date.now());
+        
+    };
+    
+    let interID
+    console.log(interID);
+    
+    document.querySelector("#start").addEventListener("click",()=>{
+        if(!interID){
+            interID = setInterval(sayAlok, 1000, "hi Alok");
+            console.log("inner if", interID);
+        }
+        console.log("outer if", interID);
+    })
+    document.querySelector("#stop").addEventListener("click",()=>{
+        console.log("before clear", interID);
+        clearInterval(interID)
+        console.log("befor null", interID);
+        interID = null
+        console.log("after null", interID);
+    })
+     
+  </script>
+</html>
