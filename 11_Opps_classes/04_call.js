@@ -11,7 +11,7 @@ function SetUserName(username){
 function createUser(username, email, password){
     // SetUserName(username)
     // SetUserName.call(username)
-    SetUserName.call(this, username) // this optionaly hota h // ye exicution context ko kisi or ko deta h or udne ni deta h
+    SetUserName.call(this, username) // ye exicution context ko kisi or ko deta h or udne ni deta h
 
     this.email = email
     this.password = password
